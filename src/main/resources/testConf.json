@@ -1,0 +1,85 @@
+{
+  "default-flink-kafka-sink": {
+    "bootstrap-servers": "",
+    "delivery-guarantee": "EXACTLY_ONCE",
+    "transactional-id-prefix": "test-prefix",
+    "kafka-producer": [
+      {"transaction.timeout.ms": "60000"},
+      {"sasl.jaas.config": "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"\" password=\"\";"},
+      {"security.protocol":  "SASL_PLAINTEXT"},
+      {"sasl.mechanism": "PLAIN"}
+    ]
+  },
+  "branches": [
+    {
+      "branch-id": "branch-a",
+      "parallelism": 3,
+      "flink-cdc-source": {
+        "instance": "polar",
+        "hostname": "",
+        "username": "",
+        "password": "",
+//        "port": 3306,
+        "database-list": ["dev_ambari_his"], // each element support regular expressions, such as ["oms*", "wms*", ".*"]
+        "table-list": ["dev_ambari_his.ztest1"] // each element support regular expressions, such as ["tableA*", "tableB*", ".*"]
+//        "include-schema-change": true,
+//        "server-id": "",
+//        "scan-startup-mode": {
+//          "mode": "",
+//          "file": "",
+//          "offset": "",
+//          "timestamp": ""
+//        }, //
+//        "server-time-zone": "",
+//        "connect-timeout": "",
+//        "connect-max-retries": 4,
+//        "connection-pool-size": 18,
+//        "heartbeat-interval": "",
+//        "jdbc": [{"": ""}, {"": ""}, {"": ""}],
+//        "debezium": [{"": ""}, {"": ""}, {"": ""}]
+      },
+      "flink-kafka-sink": {
+        "bootstrap-servers": "",
+        "delivery-guarantee": "EXACTLY_ONCE",
+        "transactional-id-prefix": "branch-a-transaction",
+        "kafka-producer": [
+          {"transaction.timeout.ms": "60000"},
+          {"sasl.jaas.config": "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"\" password=\"\";"},
+          {"security.protocol":  "SASL_PLAINTEXT"},
+          {"sasl.mechanism": "PLAIN"}
+        ]
+      }
+    },
+    {
+      "branch-id": "branch-b",
+      "parallelism": 5,
+      "flink-cdc-source": {
+        "instance": "polar",
+        "hostname": "",
+        "username": "",
+        "password": "",
+        //"port": 3306,
+        "database-list": ["dev_ambari_his"], // each element support regular expressions, such as ["oms*", "wms*", ".*"]
+        "table-list": ["dev_ambari_his.yfzhu_test_1"] // each element support regular expressions, such as ["tableA*", "tableB*", ".*"]
+      },
+      "flink-kafka-sink": {
+        "bootstrap-servers": "",
+        "delivery-guarantee": "EXACTLY_ONCE",
+        "transactional-id-prefix": "branch-b-transaction",
+        "kafka-producer": [
+          {"transaction.timeout.ms": "60000"},
+          {"sasl.jaas.config": "org.apache.kafka.common.security.plain.PlainLoginModule required username=\"\" password=\"\";"},
+          {"security.protocol":  "SASL_PLAINTEXT"},
+          {"sasl.mechanism": "PLAIN"}
+        ]
+      }
+    }
+//    {
+//      "branch-id": "branch-3",
+//      "flink-cdc-source": {},
+//      "flink-kafka-sink": {
+//      }
+//    }
+    // more branches...
+  ]
+}
