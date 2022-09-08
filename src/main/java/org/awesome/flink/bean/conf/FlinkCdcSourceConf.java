@@ -1,4 +1,4 @@
-package org.leqee.cdc.bean.conf;
+package org.awesome.flink.bean.conf;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.ververica.cdc.connectors.mysql.source.MySqlSourceBuilder;
@@ -10,7 +10,6 @@ import java.time.Duration;
 import java.util.List;
 import java.util.Map;
 import java.util.Properties;
-import java.util.function.Function;
 
 public class FlinkCdcSourceConf {
     private String instance;

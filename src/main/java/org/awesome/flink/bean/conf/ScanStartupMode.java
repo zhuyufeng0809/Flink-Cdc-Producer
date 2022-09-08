@@ -1,4 +1,4 @@
-package org.leqee.cdc.bean.conf;
+package org.awesome.flink.bean.conf;
 
 import com.ververica.cdc.connectors.mysql.table.StartupOptions;
 

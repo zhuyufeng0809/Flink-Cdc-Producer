@@ -1,6 +1,5 @@
-package org.leqee.cdc.bean.message;
+package org.awesome.flink.bean.message;
 
-import java.math.BigInteger;
 import java.util.Map;
 
 public class DmlMessage {

@@ -20,8 +20,8 @@ under the License.
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.leqee.cdc</groupId>
-	<artifactId>cdc</artifactId>
+	<groupId>org.awesome.flink</groupId>
+	<artifactId>cdc-producer</artifactId>
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
@@ -180,7 +180,7 @@ under the License.
 							</filters>
 							<transformers>
 								<transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-									<mainClass>org.leqee.cdc.Job</mainClass>
+									<mainClass>org.awesome.flink.Job</mainClass>
 								</transformer>
 							</transformers>
 						</configuration>

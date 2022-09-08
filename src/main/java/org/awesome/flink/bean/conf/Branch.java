@@ -1,4 +1,4 @@
-package org.leqee.cdc.bean.conf;
+package org.awesome.flink.bean.conf;
 
 import org.apache.flink.connector.kafka.sink.KafkaSink;
 import org.apache.flink.connector.kafka.sink.KafkaSinkBuilder;

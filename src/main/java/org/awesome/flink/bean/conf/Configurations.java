@@ -1,4 +1,4 @@
-package org.leqee.cdc.bean.conf;
+package org.awesome.flink.bean.conf;
 
 import org.apache.flink.api.common.restartstrategy.RestartStrategies;
 import org.apache.flink.api.java.utils.ParameterTool;
@@ -7,7 +7,7 @@ import org.apache.flink.streaming.api.CheckpointingMode;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.leqee.cdc.util.JsonConvertor;
+import org.awesome.flink.util.JsonConvertor;
 
 import java.util.List;
 

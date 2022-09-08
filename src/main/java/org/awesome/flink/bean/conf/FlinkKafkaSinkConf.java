@@ -1,4 +1,4 @@
-package org.leqee.cdc.bean.conf;
+package org.awesome.flink.bean.conf;
 
 import org.apache.flink.api.common.serialization.SimpleStringSchema;
 import org.apache.flink.connector.base.DeliveryGuarantee;
@@ -8,8 +8,8 @@ import org.apache.flink.connector.kafka.sink.KafkaSinkBuilder;
 import org.apache.flink.connector.kafka.sink.TopicSelector;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.leqee.cdc.bean.message.DmlMessage;
-import org.leqee.cdc.util.JsonConvertor;
+import org.awesome.flink.bean.message.DmlMessage;
+import org.awesome.flink.util.JsonConvertor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

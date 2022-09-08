@@ -16,13 +16,13 @@
  * limitations under the License.
  */
 
-package org.leqee.cdc;
+package org.awesome.flink;
 
 import org.apache.flink.api.common.eventtime.WatermarkStrategy;
 import org.apache.flink.streaming.api.environment.StreamExecutionEnvironment;
 
-import org.leqee.cdc.bean.conf.Branch;
-import org.leqee.cdc.bean.conf.Configurations;
+import org.awesome.flink.bean.conf.Configurations;
+import org.awesome.flink.bean.conf.Branch;
 
 public class Job {
 	public static void main(String[] args) throws Exception {

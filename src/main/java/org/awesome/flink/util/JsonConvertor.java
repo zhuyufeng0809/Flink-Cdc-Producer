@@ -1,4 +1,4 @@
-package org.leqee.cdc.util;
+package org.awesome.flink.util;
 
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.type.TypeReference;
